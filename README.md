@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ShyIDE
 - 👀 I’m interested in Blockchain, Crypto and anything related to Web3
-- 🌱 I’m currently learning Solidity, DApp, Javascript
+- 🌱 I’m currently learning Solidity, DApp, Javascript, Figma, CSS
 - 💞️ I’m looking to collaborate on cryptotech as a developer
 - 📫 How to reach me || Twitter @ItsShy_ || Discord @Shy#6432
 
