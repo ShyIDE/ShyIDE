@@ -102,13 +102,13 @@ int addBook(Book *name_Book, int size){
     //fgets(dummy, 40, stdin);
     scanf("%c", &dummy);
 
-    printf("Enter title: \n");
+    printf("Enter book title: \n");
     fgets(title, 40, stdin);
     if (p = strchr(title, '\n')){
         *p = '\0';
     }
 
-    printf("Enter author: \n");
+    printf("Enter author name: \n");
     fgets(author, 40, stdin);
     if (p = strchr(author, '\n')){
         *p = '\0';
