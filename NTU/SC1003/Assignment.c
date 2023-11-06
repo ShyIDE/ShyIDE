@@ -78,9 +78,11 @@ void listBooks(Book *name_Book, int size){
 
         int i;
         for (i = 0; i < size; i++){
-            printf("bookID: %d \n", name_Book[i].bookID);
-            printf("title: %s \n", name_Book[i].title);
-            printf("author: %s \n", name_Book[i].author);
+            printf("BookID: %d \n", name_Book[i].bookID);
+            printf("Book Title: %s \n", name_Book[i].title);
+            printf("Author Name: %s \n", name_Book[i].author);
+            printf("Book Price: %.2lf\n", name_Book[i].price);
+            printf("Quantity: %d\n", name_Book[i].quantity);
         }
     }
     else{
