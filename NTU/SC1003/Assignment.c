@@ -79,9 +79,9 @@ void listBooks(Book *name_Book, int size){
         int i;
         for (i = 0; i < size; i++){
             printf("BookID: %d \n", name_Book[i].bookID);
-            printf("Book Title: %s \n", name_Book[i].title);
-            printf("Author Name: %s \n", name_Book[i].author);
-            printf("Book Price: %.2lf\n", name_Book[i].price);
+            printf("Book title: %s \n", name_Book[i].title);
+            printf("Author name: %s \n", name_Book[i].author);
+            printf("Book price: %.2lf\n", name_Book[i].price);
             printf("Quantity: %d\n", name_Book[i].quantity);
         }
     }
@@ -94,13 +94,15 @@ void listBooks(Book *name_Book, int size){
 int addBook(Book *name_Book, int size){
     printf("addBook(): \n");
 
-    int i,price,quantity, book_ID;
+    int i,quantity, book_ID;
+    double price;
     char title[40], author[40], dummy[40], *p;
 
     printf("Enter bookID: \n");
     scanf("%d", &book_ID);
     //fgets(dummy, 40, stdin);
-    scanf("%c", &dummy);
+    //scanf("%c", &dummy);
+    getchar();
 
     printf("Enter book title: \n");
     fgets(title, 40, stdin);
@@ -114,10 +116,10 @@ int addBook(Book *name_Book, int size){
         *p = '\0';
     }
 
-    printf("Enter price: ");
+    printf("Enter price: \n");
     scanf("%lf", &price);
 
-    printf("Enter quantity: ");
+    printf("Enter quantity: \n");
     scanf("%d", &quantity);
 
     if (size == MAX){
@@ -153,7 +155,7 @@ int removeBook(Book *name_Book, int size) {
     printf("Enter the target book title: \n");
     fgets(searchTitle, 40, stdin);
 
-    printf("Enter the author name: \n");
+    printf("Enter the target author name: \n");
     fgets(searchAuthor, 40, stdin);
 
     if (p = strchr(searchTitle, '\n')){
@@ -176,11 +178,11 @@ int removeBook(Book *name_Book, int size) {
             strcasecmp(searchAuthor, name_Book[i].author) == 0) {
 
             printf("The target book is removed \n");
-            printf("bookID: %d \n", name_Book[i].bookID);
-            printf("title: %s \n", name_Book[i].title);
-            printf("author: %s \n", name_Book[i].author);
-            printf("price: %.2lf\n", name_Book[i].price);
-            printf("quantity: %d\n", name_Book[i].quantity);
+            printf("BookID: %d \n", name_Book[i].bookID);
+            printf("Book title: %s \n", name_Book[i].title);
+            printf("Author name: %s \n", name_Book[i].author);
+            printf("Book price: %.2lf\n", name_Book[i].price);
+            printf("Quantity: %d\n", name_Book[i].quantity);
 
             name_Book[i].bookID = 0;
             strcpy(name_Book[i].title, "");
@@ -243,10 +245,10 @@ void updateBook(Book *name_Book, int size) {
 
     char searchTitle[40], searchAuthor[40], *p;
 
-    printf("Enter the target book title: ");
+    printf("Enter the target book title: \n");
     fgets(searchTitle, 40, stdin);
 
-    printf("Enter the target author name: ");
+    printf("Enter the target author name: \n");
     fgets(searchAuthor, 40, stdin);
 
     if (p = strchr(searchTitle, '\n')) {
