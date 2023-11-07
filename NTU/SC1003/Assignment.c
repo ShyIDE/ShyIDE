@@ -184,11 +184,14 @@ int removeBook(Book *name_Book, int size) {
             printf("Book price: %.2lf\n", name_Book[i].price);
             printf("Quantity: %d\n", name_Book[i].quantity);
 
-            name_Book[i].bookID = 0;
-            strcpy(name_Book[i].title, "");
-            strcpy(name_Book[i].author, "");
-            name_Book[i].price = 0.0;
-            name_Book[i].quantity = 0;
+            for (int j = i; j < size - 1; j++) {
+                name_Book[j] = name_Book[j + 1];
+            }
+            name_Book[size - 1].bookID = 0;
+            strcpy(name_Book[size - 1].title, "");
+            strcpy(name_Book[size - 1].author, "");
+            name_Book[size - 1].price = 0.0;
+            name_Book[size - 1].quantity = 0;
 
 
             size--;
@@ -227,11 +230,11 @@ void findBook(Book *name_Book, int size){
             strcasecmp(searchAuthor, name_Book[i].author) == 0) {
 
             printf("The target book is found \n");
-            printf("bookID: %d \n", name_Book[i].bookID);
-            printf("title: %s \n", name_Book[i].title);
-            printf("author: %s \n", name_Book[i].author);
-            printf("price: %.2lf\n", name_Book[i].price);
-            printf("quantity: %d\n", name_Book[i].quantity);
+            printf("BookID: %d \n", name_Book[i].bookID);
+            printf("Book title: %s \n", name_Book[i].title);
+            printf("Author name: %s \n", name_Book[i].author);
+            printf("Book price: %.2lf\n", name_Book[i].price);
+            printf("Quantity: %d\n", name_Book[i].quantity);
             return;
         }
     }
@@ -269,23 +272,23 @@ void updateBook(Book *name_Book, int size) {
     for (i = 0; i < size; i++) {
         if (strcasecmp(searchTitle, name_Book[i].title) == 0 &&
             strcasecmp(searchAuthor, name_Book[i].author) == 0) {
-            printf("Enter the updated price: ");
+            printf("Enter updated book price: \n");
             scanf("%lf", &name_Book[i].price);
-            printf("Enter the updated quantity: ");
+            printf("Enter updated quantity: \n");
             scanf("%d", &name_Book[i].quantity);
 
-            printf("The target book is updated:\n");
-            printf("bookID: %d\n", name_Book[i].bookID);
-            printf("title: %s\n", name_Book[i].title);
-            printf("author: %s\n", name_Book[i].author);
-            printf("price: %.2lf\n", name_Book[i].price);
-            printf("quantity: %d\n", name_Book[i].quantity);
+            printf("The target book is updated\n");
+            printf("BookID: %d\n", name_Book[i].bookID);
+            printf("Book title: %s\n", name_Book[i].title);
+            printf("Author name: %s\n", name_Book[i].author);
+            printf("Book price: %.2lf\n", name_Book[i].price);
+            printf("Quantity: %d\n", name_Book[i].quantity);
 
             return;
         }
     }
 
-    printf("The target book is not in the bookshop.\n");
+    printf("The target book is not in the bookshop\n");
 }
 
 //sorting algo
