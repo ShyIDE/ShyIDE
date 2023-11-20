@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void compressStr(char *str);
+
+int main()
+{
+    char str[40];
+
+    printf("Enter a sequence of characters: \n");
+    scanf("%s", str);
+
+    printf("compressStr(): ");
+    compressStr(str);
+
+    return 0;
+}
+
+void compressStr(char *str)
+{
+    int length = strlen(str);
+
+    if (length == 0)
+    {
+        // Nothing to compress for an empty string
+        printf("\n");
+        return;
+    }
+
+    char currentChar = str[0];
+    int count = 1;
+
+    for (int i = 1; i <= length; i++)
+    {
+        if (str[i] == currentChar)
+        {
+            // Increment count for repeated characters
+            count++;
+        }
+        else
+        {
+            // Print compressed format for the current character
+            if (count > 1)
+            {
+                printf("[%d%c]", count, currentChar);
+            }
+            else
+            {
+                printf("%c", currentChar);
+            }
+
+            // Reset count and update current character
+            count = 1;
+            currentChar = str[i];
+        }
+    }
+}
