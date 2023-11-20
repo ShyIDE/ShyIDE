@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int platform1D(int ar[], int size);
+
+int main()  
+{
+   int i, b[50], size;
+   printf("Enter array size: \n");
+   scanf("%d", &size);
+   printf("Enter %d data: \n", size);
+   for (i = 0; i < size; i++)  
+      scanf("%d", &b[i]);
+   printf("platform1D(): %d\n", platform1D(b, size));
+   return 0;
+}
+
+int platform1D(int ar[], int size)
+{
+   int maxPlatform = 1;  // Initialize the maximum platform length to 1
+   int currentPlatform = 1;  // Initialize the current platform length to 1
+
+   for (int i = 1; i < size; i++) {
+      if (ar[i] == ar[i - 1]) {
+         // The current element is part of the platform
+         currentPlatform++;
+      } else {
+         // The current element is not part of the platform
+         // Reset the current platform length to 1
+         currentPlatform = 1;
+      }
+
+      // Update the maximum platform length if needed
+      if (currentPlatform > maxPlatform) {
+         maxPlatform = currentPlatform;
+      }
+   }
+
+   return maxPlatform;
+}
