@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ShyIDE
 - 👀 I’m interested in Blockchain, Cloud, Cybersecurity and Web3
-- 🌱 I’m currently learning Solidity, DApp, Javascript, Figma, CSS, Python, C
+- 🌱 I’m currently learning Solidity, DApp, Javascript, Figma, Java, Python, C
 - 💞️ I’m looking to collaborate as a developer or sofware engineer
 - 📫 How to reach me || Discord @Shy404
 
