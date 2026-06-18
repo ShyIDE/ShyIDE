@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ShyIDE
 - 👀 I’m interested in AI, LLM, Cloud, Cybersecurity and building any projects I am interested in. (I have more projects but i privated them. Do DM if you are interested to know more)
-- 🌱 I’m currently learning Solidity, Javascript, Figma, Java, Python, C
+- 🌱 I’m currently learning Solidity, Javascript, Java, Python, C
 - 💞️ I’m looking to collaborate as a developer or sofware engineer
 - 📫 How to reach me || Discord @Shy404
 
